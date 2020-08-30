@@ -1,0 +1,59 @@
+\documentclass[aps,prstab,reprint,groupedaddress,nofootinbib]{revtex4-1}
+\usepackage{amssymb, amsmath}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{xspace}
+\usepackage{titlesec}
+%\usepackage[printwatermark]{xwatermark}
+%\usepackage{tikz}
+\begin{document}
+
+\title{Letter of Intent: Consortium for PIC Software and Accelerator Science}
+\author{W. B. Mori, V. K. Decyk, F. S. Tsung}
+\affiliation{University of California, Los Angeles}
+\author{J. R. Cary}
+\affiliation{University of Colorado, Boulder}
+\author{B. M. Cowan}
+\affiliation{Tech-X Corporation}
+\author{D. F. Gordon}
+\affiliation{Naval Research Laboratory}
+\author{J. Vieira, R. A. Fonseca, L. O. Silva}
+\affiliation{Instituto Superior Tecnico, Portugal}
+\author{J. Amundson, E. Stern}
+\affiliation{Fermi National Accelerator Laboratory}
+\author{A. G. R. Thomas}
+\affiliation{University of Michigan at Ann Arbor}
+\author{K. G. Sonnad}
+\affiliation{Cornell University}
+
+\date{\today}
+
+\maketitle
+
+
+\maketitle
+
+The primary goal for computational accelerator software development is to ensure that a broad 
+community of researchers has the production software needed to make advances in current and emerging areas of accelerator science.  The beam and plasma based accelerator communities have been a leader in developing innovative algorithms and implementations for both first-principles,  particle-in-cell,  and reduced models, and data analysis tools.  While the individual efforts or combined efforts of a small subset of developers working separately will continue to be valuable, to meet the challenges of tomorrow will require a more closely connected, collaborative effort with a growing number of developers at national labs, universities, and small businesses. The need for a team effort is being driven by the growing complexity of the required software. The complexity is being driven by the need for more and improved physics modules (e.g., space charge, impedance, QED, ionization), higher fidelity (e.g., more accurate Maxwell solvers), more complicated meshes, including AMR, while maintaining high performance on emerging hardware through low level vectorization, device-based computing, and dynamic load balancing. There is no clear single path for achieving these needs so different approaches and innovation are still needed. Another goal is to ensure the effective use of the software as well as to use the software as a paradigm for educating new members including graduate students and post-docs entering the field about important concepts.  The goal is to create sufficient synergy that multiple efforts advance while not creating rigidity that stifles innovation.
+
+To meet these needs, we propose forming a Consortium on particle-in-cell modeling of accelerator science. In shaping the vision for a Consortium, we have adopted the view that a healthy ecosystem of scientific software requires a certain multiplicity of codes maintained by independent research groups. A healthy ecosystem is needed for benchmarking and cross-validation of codes, establishing scientific validity of simulation results, much as independent reproducibility of experimental results has been the gold standard for several centuries.  This has historically been difficult; all complex simulation codes which are under continual development make implicit assumptions and approximations in
+their implementation that make it difficult to simulate the same conditions in different codes
+except for the most simplistic scenarios.
+Similar codes can be run for the same problem and while each produces similar data types (e.g., field values or particle positions), direct comparison is not easy as each code makes different choices in numerics, initialization, units, interpolation, etc. Therefore it is imperative that the community work to develop common input and output file standards. A Consortium can lead efforts on using high level metadata descriptors of the problem type (e.g., short pulse laser with QED or extended beam propagation with space charge), common input parameters, and the choices for the numerics (e.g, field solver). Adopting common standards for inputs and outputs will also provide the opportunity for using outputs from one code as inputs into another, opening up our simulation codes to a world of novel integrations with diverse software tools (e.g., easily interfacing simulation results with machine learning tools). There is already some community effort in developing standards\cite{OpenPMD,PICMI,VizSchema} and these should be leveraged.  This effort would also include developing a plasma based accelerator Science Gateway.
+
+There are currently numerous software projects within the advanced acceleration community. Each has adopted its own organizational structure for growing numbers of users and developers.   The resulting innovation and the ability to be inclusive of cultural differences between national labs, universities, and companies far outweighs any perceived inefficiency. It  is worth noting that the advanced accelerator community has been the driver for innovation in the particle-in-cell methods in high performance computing for the past several decades and this has benefited other areas of plasma physics and science. 
+
+In addition, each software project has prioritized which new physics modules and performance issues should be addressed based on the users and developers within their project. There is a diverse set of views on these issues, and it is important that this be recognized.  While it is clear that it is not possible for the development of each production software be supported fully within DOE HEP, it is still essential that they be part of a community effort to share experiences and adopt standards so that users and developers of each can make comparison. While each software may be based on different language and have different data structures and objects, it is still useful to develop standards so that reference modules (in different languages) can be shared across the community. This will enable developers of different software to decide if innovative algorithms developed elsewhere are beneficial to their software. The community would also benefit if the community built a testbed that was freely available. Such a testbed would permit testing of the different new pushers and field solvers currently available and those that will be developed in the future on some standard test problems.
+
+The goal of the Consortium is to provide the organizational structure for better coordination between efforts, to ensure that innovation flourishes, and most importantly that the community has the reliable, accurate, and high-performance software that can be integrated to provide start to end simulations of key experiments and future accelerator designs, including those  for a linear collider and XFEL based on advanced acceleration concepts. PIC algorithms are increasingly being applied in the simulation and study of collective effects in beams. These may include space charge effects, electron cloud effects, fast ion effects and beam beam interaction. 
+
+
+
+% Create the reference section using BibTeX:
+\bibliographystyle{apsrev4-2}
+\bibliography{bibliography}
+
+
+
+
+\end{document}
